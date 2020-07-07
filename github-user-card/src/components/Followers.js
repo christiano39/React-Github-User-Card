@@ -43,11 +43,14 @@ class Followers extends React.Component {
                 {
                     this.state.followers.map(follower => {
                         return (
-                            <div key={follower.id}>
+                            <div 
+                                key={follower.id} 
+                                className='follower-card' 
+                                onClick={() => this.props.setUsername(follower.login)}
+                            >
                                 <img src={follower.avatar_url} alt={follower.login} />
-                                <div>
+                                <div className='follower-username'>
                                     <p>{follower.login}</p>
-                                    <p>{follower.name}</p>
                                 </div>
                             </div>
                         )

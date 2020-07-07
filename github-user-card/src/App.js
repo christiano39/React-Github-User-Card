@@ -55,7 +55,7 @@ class App extends React.Component {
       <div className="App">
         <SearchForm setUsername={this.setUsername} />
         {this.state.user && <UserCard user={this.state.user} />}
-        {this.state.user && <Followers followersURL={this.state.user.followers_url} />}
+        {this.state.user && <Followers followersURL={this.state.user.followers_url} setUsername={this.setUsername} />}
       </div>
     );
   }
